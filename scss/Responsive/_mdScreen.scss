@@ -1,0 +1,57 @@
+#skills {
+    @include responsive (768px) {
+        .skills_tittle {
+            .skills_content {
+                .skills_active {
+                    .skills_content_item {
+                        .skills_item  {
+                            width: 40%;
+                            padding: $pd-1 $pd-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#project{
+    @include responsive (768px){
+        h3{
+            font-size: $fs-6;
+        }
+        .project_tittle{
+            .project_content{
+                img{
+                    width: 75%;
+                }
+                .project_detail{
+                    width: 55%;
+                    left: 19%;
+                }
+            }
+        }
+    }
+}
+
+#about{
+    @include responsive (768px){
+    .about_information{
+        .about_left{
+            .about_avatar{
+               width: 60%;
+               height: 100%; 
+            }
+            &::before{
+                top: -4%;
+                left: 18%;
+            }
+
+            &::after{
+                bottom: -5%;
+                right: 17%;
+            }
+        }
+        }
+    }   
+}

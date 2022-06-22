@@ -1,0 +1,22 @@
+#footer{
+    background-color: $color-green-13;
+    .footer_container{
+        padding: $pd-6 $pd-20;
+        justify-content: space-between;
+        p{
+            margin: 0;
+            @include text ($fs-2 - 3,$fw-300,$color-white);
+        }
+        a{
+            @include text ($fs-2 - 3,$fw-300,$color-white);
+            background-color: $color-red-3;
+            border-radius: 50%;
+            height:40px;
+            width: 40px;
+            text-align: center;
+            i{
+                margin-top: $mg-2 + 2;
+            }
+        }
+    }
+}

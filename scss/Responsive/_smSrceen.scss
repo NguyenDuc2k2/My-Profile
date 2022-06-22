@@ -1,0 +1,144 @@
+#header {
+    @include responsive (576px) {
+        padding: 0 $pd-7;
+    }
+}
+
+#introduce {
+    @include responsive(576px) {
+        .introduce_container {
+            margin-top: $mg-7;
+
+            .introduce_left {
+                .introduce_content {
+                    h1 {
+                        font-size: $fs-4;
+                    }
+
+                    .introduce_about_content {
+                        font-size: $fs-1 + 3;
+                    }
+                }
+            }
+
+            .introduce_right {
+                .introducer_link {
+                    bottom: 45%;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#about {
+    @include responsive(576px) {
+        padding: $pd-5 0;
+
+        .about_information {
+            padding: $pd-8 $pd-3;
+
+            h3 {
+                font-size: $fs-5;
+            }
+
+            .about_right {
+                padding: 0 $pd-3;
+                .about_content {
+                    p:first-child {
+                        font-size: $fs-1 + 1;
+                        width: 95px;
+
+                    }
+
+                    p:last-child {
+                        font-size: $fs-1 + 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#resume {
+    @include responsive(576px) {
+        .resume_tittle {
+            padding: $pd-16 $pd-1;
+
+            .resume_container {
+                .resume_content {
+                    .resume_item {
+                        p {
+                            font-size: $fs-1 + 1.5;
+                            color: $color-green-4;
+                        }
+
+                        ul {
+                            li {
+                                font-size: $fs-1 + 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#skills {
+    @include responsive (576px) {
+        .skills_tittle {
+            .skills_content {
+                li {
+                    &>p{
+                        margin-left: $mg-3;
+                    }
+
+                    padding: $pd-2 $pd-3;
+                    .skills_content_item {
+                        .skills_item{
+                            padding:$pd-1 + 2 0 !important;
+                            width: 42% !important;
+                            span {
+                                font-size: $fs-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#project {
+    @include responsive (576px) {
+        .project_tittle {
+            .project_content {
+                .project_detail {
+                    left: 18%;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    @include responsive (576px) {
+        .footer_container {
+            padding: $pd-6 $pd-4;
+            position: relative;
+
+            a {
+                position: absolute;
+                top: -22%;
+                left: 45%;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

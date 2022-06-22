@@ -1,0 +1,237 @@
+#header {
+  @include responsive(1024px) {
+    .header_nav {
+      .nav_pages {
+        .nav-item {
+          a {
+            font-size: $fs-html - 2;
+            padding: 0 $pd-4;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(992px) {
+    .header_nav {
+      .nav_collpase {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 120%;
+        transform: scale(0);
+        transition: all .6s;
+        transform-origin: top right;
+
+        &.active {
+          transform: scale(1);
+        }
+
+        .nav_pages {
+          display: grid;
+          text-align: center;
+          background-color: $color-green-12;
+          padding: $pd-5;
+          border-radius: 10px;
+
+          .nav-item {
+            a {
+              color: $color-white;
+              height: 30px;
+              display: block;
+              margin: $mg-3 0;
+
+              &::after {
+                background-color: $color-white;
+              }
+
+              &.active {
+                &::after {
+                  width: 35%;
+                }
+              }
+
+              &:hover {
+                &:after {
+                  width: 35%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#introduce {
+  @include responsive(1200px) {
+    .introduce_container {
+      .introduce_left {
+        .introduce_content {
+          padding-right: 0;
+
+          h1 {
+            font-size: $fs-12;
+          }
+
+          .introduce_about_content {
+            padding: $pd-10 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(992px) {
+    .introduce_container {
+      .introduce_left {
+        .introduce_content {
+          margin-top: 0;
+        }
+
+        .introduce_about_content {
+          padding: $pd-5 0 0 !important;
+        }
+      }
+
+      .introduce_right {
+        height: 200px;
+
+        .ỉntroduce_avatar {
+          position: absolute;
+          height: 250px;
+          width: 250px;
+          right: 10%;
+          bottom: 15%;
+        }
+
+        .introducer_link {
+          bottom: 10%;
+          right: -5%;
+        }
+      }
+    }
+  }
+}
+
+#about {
+  @include responsive(992px) {
+    .about_information {
+      h3 {
+        font-size: $fs-8;
+      }
+
+      .about_left {
+        .about_avatar {
+          width: 30%;
+          height: 95%;
+        }
+
+        &::after {
+          bottom: -2%;
+          right: 33%;
+          height: 100px;
+          width: 100px;
+        }
+
+        &::before {
+          top: -7%;
+          left: 33%;
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+#resume {
+  @include responsive(998px) {
+    .resume_tittle {
+      .resume_container {
+        display: unset;
+
+        .resume_experience {
+          h3:first-child {
+            transform: translate(-40%, 350%) rotate(-90deg);
+          }
+        }
+
+        .resume_education {
+          h3 {
+            transform: translate(44%, 290%) rotate(90deg);
+          }
+        }
+
+        .resume_content {
+          margin-top: 0;
+
+          .resume_item {
+            width: 75%;
+
+            &.resume_item_1,
+            &.resume_item_2 {
+              margin-left: auto;
+
+            }
+
+            &.resume_item_3,
+            &.resume_item_4 {
+              margin-right: auto;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#skills {
+  @include responsive(992px) {
+    .skills_tittle {
+      .skills_content {
+        li {
+          cursor: pointer;
+          transition: all .4s;
+
+          .skills_content_item {
+            display: none;
+            transform: all .5s;
+          }
+
+          &.skills_active {
+            .skills_content_item {
+            display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+              p {
+                width: 30%;
+                height: 45px;
+                margin-top: $mg-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#project {
+  @include responsive (992px) {
+    .project_container {
+      width: 100%;
+    }
+  }
+}
+
+#contact {
+  @include responsive (992px) {
+    .contact_container {
+      width: 85%;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+#about {
+    @include responsive(1200px) {
+        .about_information {
+            .about_left {
+                .about_avatar {
+                    width: 63%;
+                }
+
+                &::after {
+                    right: 16%;
+                }
+
+                &::before {
+                    left: 16%;
+                }
+            }
+
+            .about_right {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+#skills {
+    @include responsive (1200px) {
+        .skills_tittle {
+            padding: $pd-16 $pd-8;
+        }
+    }
+}
+
+
+#project {
+    @include responsive (1200px) {
+        padding: $pd-16 $pd-1;
+
+        .project_tittle {
+            padding: $pd-1 0;
+
+            .project_content {
+                img {
+                    width: 62%;
+                }
+
+                .project_detail {
+                    width: 37%;
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    @include responsive (1200px) {
+        .contact_container {
+            width: 85%;
+
+            .contact_header {
+                h3 {
+                    font-size: $fs-6 ;
+                }
+
+                p {
+                    font-size: $fs-2 - 4;
+                }
+            }
+
+            .contact_footer {
+                .contact_info {
+                    h4 {
+                        font-size: $fs-2;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                font-size: $fs-1 ;
+                            }
+
+                            .contact_text {
+                                font-size: $fs-1;
+                            }
+                        }
+                    }
+                }
+
+                .contact_form {
+                    .group {
+                        label {
+                            font-size: $fs-1 + 1;
+                            top: 14px;
+                        }
+                        p{
+                            font-size: $fs-1 + 2;
+                        }
+                        input {
+                            font-size: $fs-1 ;
+
+                            &:focus,
+                            &:valid {
+                                &~label {
+                                    top: -10px !important;
+                                }
+                            }
+                        }
+
+                        .form_button {
+                            font-size: $fs-1 + 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
